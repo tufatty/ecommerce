@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% load static %}
+<div class='container'>
+     {% block content %}
+     <h3>Store</h3>
+     <hr>
+     <br>
+     <div>
+
+          <div class="row">
+               {% for product in products %}
+               <div class="col-lg-4">
+                    <div class="box-element product">
+                    <img class="thumbnail" src="{{product.imageURL}}">
+                    <h3>{{product.name}}</h3>
+                    <br>
+                    <h6 style="text-align:left;">{{product.address}}</h6>
+                    <hr>
+                    <button data-product={{product.id}}   data-action="add" id="cart-btn" class="btn btn-outline-secondary add-btn update-cart">Add</button>
+                    <a class="btn btn-outline-success" href="#">View</a>
+                    <h4 style="display:inline-block; float:right"><strong>${{product.price|floatformat:2}}</strong></h4>
+                    </div>
+               </div>              
+               {% endfor %}
+          </div>
+          <hr>
+     </div>
+{% endblock content %}
+</div>
