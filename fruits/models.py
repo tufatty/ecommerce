@@ -79,6 +79,7 @@ class ShippingAddress(models.Model):
     city = models.CharField("City", max_length=200, null=False)
     state = models.CharField("State", max_length=200, null=False)
     zipcode = models.CharField("Zip Code", max_length=200, null=False)
+    country = models.CharField("Country", max_length=200, null=False, default='Nigeria')
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
