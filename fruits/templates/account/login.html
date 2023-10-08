@@ -3,11 +3,16 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
+{% block head_title %}{% trans "Login In" %}{% endblock head_title %}
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
+<div class="col-md-6 offset-md-3">
+
+<h1>{% trans "WELCOME TO CHI-CHI BEKEE" %}</h1>
+<h2>{% trans "(your favourite online store)"%}</h2>
+<hr>
+<h3>{% trans "Please Login In" %}</h3>
 
 {% get_providers as socialaccount_providers %}
 
@@ -29,7 +34,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
+<p>{% blocktrans %}But If you have not created an account yet, then please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
@@ -40,7 +45,10 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  <br><br>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
 </form>
+
+</div>
 
 {% endblock content %}
