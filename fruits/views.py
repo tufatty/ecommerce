@@ -16,6 +16,9 @@ current_date = datetime.datetime.now()
 year = current_date.strftime('%Y')
 
 # Create your views here.
+def home(request):
+    context={}
+    return render (request, 'account/home.html', context)
 
 def store(request):
     data = cartData(request)
@@ -106,3 +109,12 @@ def processOrder(request):
 
     return JsonResponse('payment complete', safe=False)
 
+def account_login(request):
+    context = {}
+    return render(request, 'account/login.html',context )
+def account_logout(request):
+    context = {}
+    return render(request, 'account/logout.html',context )
+def account_signup(request):
+    context = {}
+    return render(request,'account/logout.html',context)
