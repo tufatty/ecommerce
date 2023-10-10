@@ -109,12 +109,3 @@ def processOrder(request):
 
     return JsonResponse('payment complete', safe=False)
 
-def account_login(request):
-    context = {}
-    return render(request, 'account/login.html',context )
-def account_logout(request):
-    context = {}
-    return render(request, 'account/logout.html',context )
-def account_signup(request):
-    context = {}
-    return render(request,'account/logout.html',context)
