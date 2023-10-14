@@ -1,4 +1,97 @@
-.shad h1{
-    text-align: center;
-    color: brown;
+body{
+    overflow-x: hidden;
+   
+}
+.wool{
+    z-index: 2;
+    background-color: white;
+}
+.job{
+    background-color: red;
+    height:40vh;
+    width: 100vw;
+    padding-bottom: 50px;
+}
+.job img{
+    float: left;    
+    padding-left: 20px;
+    object-fit:cover;    
+    height:20vh;
+}
+.job h1{
+    text-shadow: white 2px 3px 2px;
+    padding-right: 20px;
+    text-decoration: underline;
+    text-decoration-line: underline;
+}
+
+.job ul{
+    display: block;
+}
+.job ul li{
+    display: inline-block;
+}
+@media only screen and (max-width: 600px) {
+  .job {background:green;
+        height:fit-content;
+    }
+}
+@media only screen and (min-width: 600px) {
+  .job {background:red;
+        height:fit-content;
+    }
+}
+center{
+    background-color: black;
+    width:auto;
+    padding-bottom: 20px;
+}
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+.product{
+	border-radius: 0 0 4px 4px;
+}
+.row ul li{
+    list-style-type: none;
+    float:inline-end;
+    color: chocolate;
+    text-shadow: green 0px 1px 1px;
+    text-decoration: double;
+    margin-top: 5px;
+}
+center h1{
+    color: aquamarine;
+    text-shadow:white 2px 2px 4px;
+    
+}
+center h1:hover{
+    color: yellowgreen;
+    text-shadow:white 2px 2px 4px;
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    transition: all 4s ease-in-out;
+    transition-duration: 2s;
+    cursor: help;    
+}
+.bi:hover{
+    color:red;
+    cursor: pointer;
+    transition:all 4s ease-in-out;
+    transition-duration: 2s;
+    translate: 6px 8px 35px;
+    transform-style: preserve-3d;
+    transform:rotateX(360deg);   
+}
+.apache{
+    display:inline-block;
+    position:absolute;
+    list-style-type: none;
+    color: #fff;
+}
+.job marquee{
+    text-shadow: white 2px 2px 2px;
 }

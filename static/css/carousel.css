@@ -4,6 +4,6 @@
 .c-img{
     height:inherit;
     object-fit: cover;
-    filter: brightness(0.6), contrast(0.7);
+    filter: brightness(0.3), contrast(0.4);
 
 }

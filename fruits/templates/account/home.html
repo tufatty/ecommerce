@@ -6,17 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block head_title %}{% trans "WELCOME" %}{% endblock head_title %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-  </head>
+   
+
+</head>
 <body>
 
 {% block content %}
 <br>
 {% include "account/carousel.html" %}
 <br>
-<hr>
-<div class='shad'>
-<h1 class='m-5'> WE DEAL ON</h1>
+<div class='wool'>
+ <center class=''>
+    <h1>WE DEAL ON:<hr></h1><br>
+    <div class="row justify-content-evenly">
+        <div class="col-md-3 offset-md-3 box-element product">
+            <i class="bi bi-handbag-fill float-start">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-handbag-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 0-2 2v2H5V3a3 3 0 1 1 6 0v2h-1V3a2 2 0 0 0-2-2zM5 5H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11v1.5a.5.5 0 0 1-1 0V5H6v1.5a.5.5 0 0 1-1 0V5z"/>
+                  </svg>
+            </i>
+            <ul class='tony'>
+                <li>Hand Bags</li>
+                <li>Traveling Bags</li>
+                <li>School Bags</li>
+                <li>Foot Wears</li>
+            </ul>
+        </div>
+        <div class="col-md-3 offset-me-2 box-element product">
+            <i class="bi bi-person-standing-dress float-start">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-standing-dress" viewBox="0 0 16 16">
+                    <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"/>
+                  </svg>
+            </i>
+            <ul class='tony'>
+                <li>Beautiful Gowns</li>
+                <li>Sweet tops</li>
+                <li>Ankara Gowns</li>
+                <li>Jeans</li>                
+            </ul>
+        </div>
+      </div>
+      <br>
+    <div class="row justify-content-evenly">
+        <div class="col-md-3 offset-md-3 box-element product">
+            <i class="bi bi-hearts float-start">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015Zm6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343ZM7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358Z"/>
+                  </svg>
+            </i>
+            <ul class='tony'>
+                <li>Wigs</li>
+                <li>Nail Kits</li>
+                <li>MakeUp Kits</li>
+                <li>Gele/Hair Ties</li>
+            </ul>
+        </div>
+        <div class="col-md-3 offset-me-2 box-element product">
+            <i class="bi bi-sunglasses float-start">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-sunglasses" viewBox="0 0 16 16">
+                    <path d="M3 5a2 2 0 0 0-2 2v.5H.5a.5.5 0 0 0 0 1H1V9a2 2 0 0 0 2 2h1a3 3 0 0 0 3-3 1 1 0 1 1 2 0 3 3 0 0 0 3 3h1a2 2 0 0 0 2-2v-.5h.5a.5.5 0 0 0 0-1H15V7a2 2 0 0 0-2-2h-2a2 2 0 0 0-1.888 1.338A1.99 1.99 0 0 0 8 6a1.99 1.99 0 0 0-1.112.338A2 2 0 0 0 5 5H3zm0 1h.941c.264 0 .348.356.112.474l-.457.228a2 2 0 0 0-.894.894l-.228.457C2.356 8.289 2 8.205 2 7.94V7a1 1 0 0 1 1-1z"/>
+                  </svg>
+            </i>
+            <ul class='tony'>
+                <li>Sun Glasses</li>
+                <li>Jewelries</li>                
+                <li>Bikini Wears</li>
+                <li>Undies</li>
+            </ul>
+        </div>
+      </div>
+
+      
+</center>
+<br>
+<br>
+<div class='job'>
+    <h1>SUPPORTED PAYMENT OPTIONS</h1>
+    <marquee class='float-end'>
+       <h3> CHI-CHI NWA IS THE BEST AND WE ALWAYS DELIEVER THE BEST FOR YOUR BEAUTY AT ALL TIMES. . . </h3>
+    </marquee>    
+    <ul>
+     <li> <img src="/images/bestpay.jpg"> </li>
+     <li> <img src="/images/mastercard-logo.png"> </li>
+     <li> <img src="/images/visa-logo.jpg"> </li>
+    </ul>
+    
 </div>
+<br>
+<br>
+</div>
+<footer>
+    <ul>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Apply for Job</li>
+        <li>Book an Appointment</li>
+        <li>Sponsors</li>        
+    </ul>
+
+</footer>
 {% endblock content %}
 </body>
