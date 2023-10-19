@@ -1,8 +1,14 @@
-body{
+.kodo{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('/static/images/bag6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
    
 }
-
+.ejima{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .col-md-6 {
     text-align: center;
 }
@@ -20,3 +26,11 @@ body{
 marquee h1{
     color:red;
 }
+@media only screen and (max-width: 600px) {
+    .kodo {
+        height: 100vh;
+        filter: blur(60%), brightness(0.7), contrast(0.4);
+    
+        
+      }
+    }

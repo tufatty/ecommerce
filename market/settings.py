@@ -50,6 +50,9 @@ INSTALLED_APPS = [
 
     #providers
     'allauth.socialaccount.providers.google',    
+
+    #for widget tweak
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
@@ -159,11 +162,19 @@ SITE_ID = 1
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION ='optional'
-ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = 'settings.LOGIN_URL'
 ACCOUNT_EMAIL_CONFIRMATION_COOLDOWN = 180
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 7
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 
 
 LOGIN_REDIRECT_URL = 'fruits:store'
+
+
+# EMAIL SETTINGS
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER = 'ugonjokubarthlomew@gmail.com'
+EMAIL_HOST_PASSWORD = 'jsekwrkspootruqf'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True

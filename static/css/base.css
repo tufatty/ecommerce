@@ -1,5 +1,14 @@
+body{
+    width:70vw;
+}
 .aex h1 a{
     text-decoration: none;
     color:black;
     text-shadow: green 2px 3px 2px;
+}
+.awu{
+    margin-left: 50vw;
+    float:right;
+    margin-top: 0;
+    padding-bottom: 20px;
 }

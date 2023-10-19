@@ -17,7 +17,7 @@ year = current_date.strftime('%Y')
 
 # Create your views here.
 def home(request):
-    context={}
+    context={'year':year}
     return render (request, 'account/home.html', context)
 
 def store(request):

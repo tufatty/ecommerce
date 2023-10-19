@@ -12,7 +12,7 @@ class Customer(models.Model):
 
 class Product(models.Model):
     name = models.CharField("Name:", max_length=200)
-    address = models.CharField("Address:", max_length=300)
+    sizes = models.CharField("Sizes:", max_length=300)
     price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
     digital = models.BooleanField(default=False,null=True,blank=True)
     image = models.ImageField(null=True, blank=True)

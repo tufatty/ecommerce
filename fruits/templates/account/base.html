@@ -13,37 +13,42 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+   
 
   </head>
   <body>
     {% block body %}
 
     {% if messages %}
-    <div>
-      <strong>{% trans "Messages:" %}</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
-    </div>
+    {% for messages in messages %}
+    
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{messages}} 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    
+    {% if messages.tags %} 
+            
+    {% endif %} 
+    {% endfor %}
     {% endif %}
+        <div class='aex float-start'>
+          <h1><a href="{% url 'fruits:home' %}">CHI-CHI BEKEE</a></h1>
+        </div>
 
-      <div class='aex float-start'>
-        <h1><a href="{% url 'fruits:home' %}">CHI-CHI BEKEE</a></h1>
+      <div class="awu">
+        <ul class='mt-2'>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'account_email' %}">{% trans "Change Email" %}</a></li>
+          <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
+          {% else %}
+          <li><a href="{% url 'account_signup' %}" class='btn btn-success'>{% trans "Sign Up" %}</a></li>
+          <li><a href="{% url 'account_login' %}" class='btn btn-dark'>{% trans "Sign In" %}</a></li>
+          {% endif %}
+        </ul>
       </div>
-
-    <div class="awu float-end">
-      <ul class='mt-2'>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">{% trans "Change Email" %}</a></li>
-        <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
-        {% else %}
-        <li><a href="{% url 'account_signup' %}" class='btn btn-outline-success'>{% trans "Sign Up" %}</a></li>
-        <li><a href="{% url 'account_login' %}" class='btn btn-outline-dark'>{% trans "Sign In" %}</a></li>
-        {% endif %}
-      </ul>
     </div>
+      
     {% block content %}
     {% endblock content %}
     {% endblock body %}

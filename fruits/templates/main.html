@@ -66,7 +66,7 @@
   </script>
 </head>
 <body>
-        <div class='float-center'>
+        <div class='float-center mt-2'>
           <ul class="nav nav-underline">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'fruits:store' %}">CHI-CHI BEKEE</a>
@@ -97,12 +97,12 @@
               </svg>
               
             </i></a>
-            
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_login' %}">Settings</a>
-            </li>
           </div>
+          
+          <li class="nav-item float-end">
+            <a class="nav-link" href="{% url 'account_logout' %}">Log out</a>
+          </li>
+          </li>
            
             
             

@@ -1,4 +1,5 @@
 {% extends "account/base.html" %}
+{% load widget_tweaks %}
 
 {% load i18n %}
 {% load account socialaccount %}
@@ -6,14 +7,15 @@
 {% block head_title %}{% trans "Login In" %}{% endblock head_title %}
 
 {% block content %}
+<body class='kodo'>
 <div class="container style='color:red'">
 <div class="col-md-6 offset-md-3">
-
-<marquee> <h1>{% trans "WELCOME TO CHI-CHI BEKEE" %}</h1> </marquee>
-<h2>{% trans "(your favourite online store)"%}</h2>
+<br><br>
 <hr>
-<div class="shadow-sm p-3 mb-5 bg-white rounded">
-<h3>{% trans "Please Login In" %}</h3>
+<br>
+<div class="shadow-sm p-3 mb-5 bg-white rounded opacity-75">
+<br>  
+<h3>{% trans "Welcome, Please Login In" %}</h3>
 
 {% get_providers as socialaccount_providers %}
 
@@ -35,7 +37,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
+<p class='ejima'>{% blocktrans %}If you have not created an account yet, please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
@@ -47,11 +49,11 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% endif %}
   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   <br><br>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+  <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>
 </form>
 </div>
 
 </div>
 </div>
-
+</body>
 {% endblock content %}

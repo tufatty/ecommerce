@@ -10,15 +10,16 @@
 
 </head>
 <body>
-
+<hr>
 {% block content %}
 <br>
 {% include "account/carousel.html" %}
 <br>
+<hr>
 <div class='wool'>
- <center class=''>
+ <center class='biggy border border-light'>
     <h1>WE DEAL ON:<hr></h1><br>
-    <div class="row justify-content-evenly">
+    <div class="row">
         <div class="col-md-3 offset-md-3 box-element product">
             <i class="bi bi-handbag-fill float-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-handbag-fill" viewBox="0 0 16 16">
@@ -32,6 +33,7 @@
                 <li>Foot Wears</li>
             </ul>
         </div>
+
         <div class="col-md-3 offset-me-2 box-element product">
             <i class="bi bi-person-standing-dress float-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-standing-dress" viewBox="0 0 16 16">
@@ -45,9 +47,7 @@
                 <li>Jeans</li>                
             </ul>
         </div>
-      </div>
-      <br>
-    <div class="row justify-content-evenly">
+
         <div class="col-md-3 offset-md-3 box-element product">
             <i class="bi bi-hearts float-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
@@ -74,14 +74,21 @@
                 <li>Undies</li>
             </ul>
         </div>
-      </div>
+
+
+
+    </div>
+
+
+      <br>
 
       
 </center>
+<hr>
 <br>
 <br>
-<div class='job'>
-    <h1>SUPPORTED PAYMENT OPTIONS</h1>
+<div class='job border border-secondary'>
+    <h1>SUPPORTED PAYMENT OPTIONS AND PARTNERS</h1>
     <marquee class='float-end'>
        <h3> CHI-CHI NWA IS THE BEST AND WE ALWAYS DELIEVER THE BEST FOR YOUR BEAUTY AT ALL TIMES. . . </h3>
     </marquee>    
@@ -89,6 +96,8 @@
      <li> <img src="/images/bestpay.jpg"> </li>
      <li> <img src="/images/mastercard-logo.png"> </li>
      <li> <img src="/images/visa-logo.jpg"> </li>
+     <li> <img src="/images/amazon.webp"> </li>
+     <li> <img src="/images/gucci-vector.png"> </li>
     </ul>
     
 </div>
@@ -96,14 +105,27 @@
 <br>
 </div>
 <footer>
-    <ul>
-        <li>About Us</li>
-        <li>Careers</li>
-        <li>Apply for Job</li>
-        <li>Book an Appointment</li>
-        <li>Sponsors</li>        
-    </ul>
-
-</footer>
+    <div class='cow'>
+        <ul class='float-start me-4'>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Apply for Job</li>
+            <li>Book an Appointment</li>
+            <li>Sponsors</li>        
+        </ul>
+        <ul class='float-start me-4'>
+            <li>CHI-CHI &copy; 1995-{{year}}</li>    
+             
+        </ul>
+          <ul class='float-start me-4'>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Apply for Job</li>
+            <li>Book an Appointment</li>
+            <li>Sponsors</li>        
+        </ul>
+    </div>
+    
+    </footer>
 {% endblock content %}
 </body>
