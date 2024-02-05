@@ -15,11 +15,6 @@ import os.path
 
 #FOR HEROKU SETTINGS
 
-import django_heroku
-import dj_database_url
-from decouple import Config
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -58,7 +53,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',    
 
     #for widget tweak
-    'widget_tweaks'
+    'widget_tweaks',
+    'whitenoise'
 ]
 
 MIDDLEWARE = [
@@ -91,7 +87,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'market.wsgi.application'
 
 
 # Database
@@ -189,4 +184,3 @@ EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-django_heroku.settings(locals())

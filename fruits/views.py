@@ -20,6 +20,10 @@ def home(request):
     context={'year':year}
     return render (request, 'account/home.html', context)
 
+def categories(request):
+    context={'year':year}
+    return render (request, 'categories.html', context)
+
 def store(request):
     data = cartData(request)
     cartItems = data['cartItems']
@@ -48,11 +52,19 @@ def checkout(request):
 
     context = {'items':items, 'order':order, 'cartItems':cartItems}
     return render(request, 'checkout.html', context)
-    
+
+
+def product(request,pk):
+    data = cartData(request)
+    cartItems = data['cartItems']
+    product = Product.objects.get(id=pk)
+    context = {'product':product, 'cartItems':cartItems}
+    return render(request, 'product.html', context)
+
 def updateItem(request):
     data = json.loads(request.body)
     productId = data['productId']
-    action = data['action']
+    action = data['action'],
 
     print('Action:', action)
     print('productId:', productId)

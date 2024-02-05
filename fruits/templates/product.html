@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+    <div class='container'>
+        <h3>{{product.name}}</h3>
+        <hr>
+        <div class='card mb-3'>
+            <div class='row g-0'>
+                <div class='col-md-4'>
+                    <img src={{product.image.url}} class='img-fluid rounded-start' alt="{{product.name}}">
+                </div>
+                <div class='col-md-8'>
+                    <div class='card-body'>
+                        <center>
+                        <h1 class='card-title'><span style='text-decoration:underline'>{{product.name}}</span></h1>
+                        <br>
+                        <br>                        
+                        <h5 class='float-start'>Colors in Stock:</h5>
+                        <button data-product={{product.id}}   data-action="add" id="cart-btn" class="btn btn-outline-secondary add-btn update-cart float-end">Add</button>
+                           
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
