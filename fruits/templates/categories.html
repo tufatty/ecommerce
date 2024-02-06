@@ -1,1 +1,51 @@
-<h1>AWU MEN OHHH!!!</h1>
+{% extends 'main.html' %}
+{% load static %}
+{% load i18n %}
+{% block head_title %}{% trans "Categories" %}{% endblock head_title %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/categories.css' %}">
+</head>
+
+<body>
+<div class="container-sm">
+    <center><h1 style='text-shadow: red 2px 2px 1px'>CATEGORIES</h1></center>
+    <hr>
+    <div class='row'>
+
+            <div class='col float-start border'>
+                <br>
+                <center><h3 style='text-shadow: red 2px 2px 1px'>CLOTHINGS</h3></center>
+                <hr>
+                <br>
+                <ul>
+                    <li><a class="" href="{% url 'fruits:categories' %}">BAGS</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">BLOUSES</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">GELE/HAIR TIES</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">GOWNS</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">SHOES</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">TOPS</a></li>
+                
+                </ul>
+            </div>
+            <div class='col float-end border'>
+                <br>
+                <center><h3 style='text-shadow: red 2px 2px 1px'>OTHERS</h3></center>
+                <hr>
+                <br>
+                <ul>
+                    <li><a class="" href="{% url 'fruits:categories' %}">JEWERIES</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">MAKE-UP KITS</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">PURSES</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">WIGS/HAIRS</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">SANITARIES</a></li><br>
+                    <li><a class="" href="{% url 'fruits:categories' %}">SUNGLASSES</a></li>
+                
+                </ul>
+            </div>   
+    </div>
+</div>
+<footer> &copy; 2020-{{year}} Chichibekee.com </footer>
+</body>
+{%endblock content%}

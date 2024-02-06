@@ -1,0 +1,25 @@
+.container ul li {
+    list-style-type: none;
+    text-decoration: none;
+}
+.container ul li a{
+    text-decoration: none;
+}
+.container ul li a:hover{
+    color:rgb(151, 21, 21);
+    font-weight: 100px;
+    text-shadow: rgb(255, 255, 255) 1px 1px 6px;
+    border-bottom-style: ridge;
+    font-weight: 500;
+    font-size: 18px;
+}
+.col{
+    background-color: rgb(255, 255, 255);
+    z-index: 0;
+  
+}
+.row{   
+    z-index: 1;
+    background-color: aquamarine;
+    padding:20px;
+}
