@@ -4,15 +4,17 @@
 }
 .container ul li a{
     text-decoration: none;
+    color:rgb(8, 73, 253);
 }
 .container ul li a:hover{
-    color:rgb(151, 21, 21);
+    color:rgb(0, 0, 0);
     font-weight: 100px;
-    text-shadow: rgb(255, 255, 255) 1px 1px 6px;
+    text-shadow: rgb(219, 47, 47) 1px 1px 6px;
     border-bottom-style: ridge;
     font-weight: 500;
     font-size: 18px;
 }
+
 .col{
     background-color: rgb(255, 255, 255);
     z-index: 0;

@@ -16,13 +16,72 @@ current_date = datetime.datetime.now()
 year = current_date.strftime('%Y')
 
 # Create your views here.
+
 def home(request):
     context={'year':year}
     return render (request, 'account/home.html', context)
 
+
+########### FOR EVERYTHING ON CATEGORIES ##################
+
 def categories(request):
     context={'year':year}
     return render (request, 'categories.html', context)
+
+########### CLOTHINGS ######################
+def bags(request):
+    context={'year':year}
+    return render (request, 'categories/clothings/bags.html', context)
+
+def blouses(request):
+    context={'year':year}
+    return render (request, 'categories/clothings/blouses.html', context)
+
+def gele(request):
+    context={'year':year}
+    return render (request, 'categories/clothings/gele.html', context)
+
+def gowns(request):
+    context={'year':year}
+    return render (request, 'categories/clothings/gowns.html', context)
+
+def shoes(request):
+    context={'year':year}
+    return render (request, 'categories/clothings/shoes.html', context)
+
+def tops(request):
+    context={'year':year}
+    return render (request, 'categories/clothings/tops.html', context)
+
+
+############### OTHERS ###########################
+
+def jewelries(request):
+    context={'year':year}
+    return render (request, 'categories/others/jewelries.html', context)
+
+def make_ups(request):
+    context={'year':year}
+    return render (request, 'categories/others/makeups.html', context)
+
+def purses(request):
+    context={'year':year}
+    return render (request, 'categories/others/purses.html', context)
+
+def wigs(request):
+    context={'year':year}
+    return render (request, 'categories/others/wigs.html', context)
+
+def sanitaries(request):
+    context={'year':year}
+    return render (request, 'categories/others/sanitaries.html', context)
+
+def sunglasses(request):
+    context={'year':year}
+    return render (request, 'categories/others/sunglasses.html', context)
+
+
+###########################################
 
 def store(request):
     data = cartData(request)
