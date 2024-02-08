@@ -27,7 +27,29 @@ class Product(models.Model):
         except:
             url = ''
         return url  
-    
+
+######### FOR CATEGORIES OF THINGS #################
+######### CLOTHINGS ###############    
+
+class Bags(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+
+
 class Order(models.Model):
     customer =models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
     date_ordered = models.DateTimeField("Date", auto_now_add=True)
