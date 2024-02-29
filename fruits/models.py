@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+
+
 # Create your models here.
 
 class Customer(models.Model):
@@ -9,6 +11,8 @@ class Customer(models.Model):
 
     def __str__(self):
         return self.name
+
+
 
 class Product(models.Model):
     name = models.CharField("Name:", max_length=200)
@@ -28,7 +32,10 @@ class Product(models.Model):
             url = ''
         return url  
 
-######### FOR CATEGORIES OF THINGS #################
+######### FOR CATEGORIES OF THINGS ##################################################################################################################################
+    
+
+    
 ######### CLOTHINGS ###############    
 
 class Bags(models.Model):
@@ -48,6 +55,208 @@ class Bags(models.Model):
         except:
             url = ''
         return url  
+    
+
+class Blouses(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+    
+
+
+class Gele(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+    
+
+
+class Gowns(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+    
+
+
+class Shoes(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+    
+
+
+class Tops(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+    
+
+######### OTHERS ###############    
+
+class Jewelries(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+    
+
+class Makeups(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+    
+
+
+class Purses(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+    
+
+
+class Wigs(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+
+
+class Sunglasses(models.Model):
+    name = models.CharField("Name:", max_length=200)
+    sizes = models.CharField("Sizes:", max_length=300)
+    price = models.DecimalField("Price:",max_digits=7, decimal_places=2)
+    digital = models.BooleanField(default=False,null=True,blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url  
+
+
+######################################################################################################
+
 
 
 class Order(models.Model):
