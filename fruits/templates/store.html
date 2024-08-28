@@ -15,7 +15,7 @@
                     <br>
                     <h6 style="text-align:left;">{{product.address}}</h6>
                     <hr>
-                    <button data-product={{product.id}}   data-action="add" id="cart-btn" class="btn btn-outline-secondary add-btn update-cart">Add</button>
+                    <button data-product={{product.id}}   data-action="add" id="cart-btn" class="btn btn-outline-secondary add-btn update-cart"> Add </button>
                     <a class="btn btn-outline-success" href="{% url "fruits:product" product.id %}">View</a>
                     <h4 style="display:inline-block; float:right"><strong>${{product.price|floatformat:2}}</strong></h4>
                     </div>
