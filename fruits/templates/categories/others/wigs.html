@@ -1,6 +1,17 @@
 {% extends 'main.html' %}
 {% load static %}
+{% load i18n %}
+{% block head_title %}{% trans "Categories" %}{% endblock head_title %}
+
 {% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/categories.css' %}">
+</head>
+
+<body>
+    <div class="container-sm">
+        <center><h1 style='text-shadow: red 2px 2px 1px'>WIGS</h1></center>
+    <hr>
 
 
 
@@ -9,6 +20,8 @@
 
 
 
-
-
+    <br>
+    <footer style='background-color:black'><center><span style='color:white'> &copy; 2020-{{year}} Chichibekee.com </span></center> </footer>
+    <br>
+</body>
 {%endblock content%}

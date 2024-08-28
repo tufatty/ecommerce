@@ -31,7 +31,10 @@ def categories(request):
 
 ########### CLOTHINGS ######################
 def bags(request):
-    context={'year':year}
+    data = cartData(request)
+    cartItems = data['cartItems']
+    bags = Bags.objects.all()
+    context={'year':year, 'bags':bags, cartItems:'cartItems'}
     return render (request, 'categories/clothings/bags.html', context)
 
 def blouses(request):
