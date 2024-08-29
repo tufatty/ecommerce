@@ -23,7 +23,7 @@
              <h6 style="text-align:left;">{{bags.address}}</h6>
              <hr>
              <button data-product={{bags.id}}   data-action="add" id="cart-btn" class="btn btn-outline-secondary add-btn update-cart"> Add </button>
-             <a class="btn btn-outline-success" href="{% url 'fruits:bags'%}">View</a>
+             <a class="btn btn-outline-success" href="{% url 'fruits:bags' bags.id %}">View</a>
              <h4 style="display:inline-block; float:right"><strong>${{bags.price|floatformat:2}}</strong></h4>
              </div>
         </div>              
